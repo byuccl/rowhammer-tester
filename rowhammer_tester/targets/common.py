@@ -46,7 +46,9 @@ _target_name_to_fancy_string = {
     'lpddr4_test_board': "LPDDR4 Test Board",
     'ddr4_datacenter_test_board': "Data Center DRAM Tester",
     'ddr5_tester': "DDR5 Tester",
-    'ddr5_test_board': "DDR5 Test Board"
+    'ddr5_test_board': "DDR5 Test Board",
+    'nexys_video': "Nexys Video",
+    'nexys4_ddr': "Nexys 4 DDR",
 }
 
 # SoC ----------------------------------------------------------------------------------------------

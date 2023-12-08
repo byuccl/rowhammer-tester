@@ -110,7 +110,7 @@ class HwRowHammer(RowHammer):
             else:
                 print()
                 self.display_errors(errors, read_count)
-                return
+                # return
 
         if self.no_refresh:
             print('\nDisabling refresh ...')
@@ -128,6 +128,7 @@ class HwRowHammer(RowHammer):
                     # must be divided by number of rows, and rounded up
                     self.payload_executor_attack(
                         read_count=(read_count + len(row_tuple) - 1) // len(row_tuple),
+                        
                         row_tuple=row_tuple)
                 else:
                     if len(row_tuple) & (len(row_tuple) - 1) != 0:

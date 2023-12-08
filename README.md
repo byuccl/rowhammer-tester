@@ -4,6 +4,8 @@ Copyright (c) 2020-2023 [Antmicro](https://www.antmicro.com)
 
 The aim of this project is to provide a platform for testing the [DRAM "Row Hammer" vulnerability](https://users.ece.cmu.edu/~yoonguk/papers/kim-isca14.pdf).
 
+This was forked by Brigham Young University Configurable Computing Lab. The purpose of it is to recreate the rowhammer experiments done by the lab
+
 The repository includes:
 
 * `rowhammer_tester/` - Core part of the project, a Python module including:
