@@ -5,7 +5,7 @@ from migen import *
 from litex_boards.platforms import digilent_nexys4ddr
 from litex.build.xilinx.vivado import vivado_build_args, vivado_build_argdict
 from litex.soc.integration.builder import Builder
-from litex.soc.cores.clock import S7PLL, S7IDELAYCTRL
+from litex.soc.cores.clock import S7PLL, S7IDELAYCTRL, S7MMCM
 
 from litedram.phy import s7ddrphy
 
@@ -17,7 +17,7 @@ from rowhammer_tester.targets import common
 
 class CRG(Module):
     def __init__(self, platform, sys_clk_freq):
-        self.submodules.pll = pll = S7PLL(speedgrade=-1)
+        self.submodules.pll = pll = S7MMCM(speedgrade=-1)
         self.comb += pll.reset.eq(~platform.request("cpu_reset"))
         pll.register_clkin(platform.request("clk100"), 100e6)
 
